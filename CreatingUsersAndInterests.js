@@ -1,4 +1,3 @@
-
 var textForInterests;
 var textForNames;
 var arrOfInterests = [];
@@ -7,9 +6,10 @@ var interests = [];
 var names = []
 
 function makeInterest(){
+	document.write(textForInterests);
 	arrOfInterests = textForInterests.split("\n");
 	for(var i = 0; i < arrOfInterests.length; i++){
-		var interest = '{"id":'+i+', "description": \"'+arrOfInterests[i]+'"}'
+		var interest = '{"id":'+i+', "description": \"'+arrOfInterests[i]+'"},'
 		document.write(interest);
         document.write("<br>");
 	}
@@ -38,7 +38,7 @@ function makeUsers(){
 
 function makeUsernames(){
     for(var i = 0; i < 50; i++){
-        document.write('{"username": "'+names[i]+'", "password": "'+names[i]+i + '"}');
+        document.write('{"username": "'+names[i]+'", "password": "'+names[i]+i + '"},');
         document.write("<br>")
     }
 }
@@ -54,7 +54,7 @@ function readTextFile(file)
         {
             if(rawFile.status === 200 || rawFile.status == 0)
             {
-                textForNames = rawFile.responseText;
+                textForInterests = rawFile.responseText;
             }
         }
     }
