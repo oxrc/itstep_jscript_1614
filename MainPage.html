@@ -3,8 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Main Page</title>
     <link rel="stylesheet" href="assets/css/listing.css">
+    <style>
+    
+    table {
+    border: 2px solid black;
+    width: auto;
+    margin-left: 350px;
+}
+        a{
+            margin-right: 10px;
+        }
+        .pagination{
+            margin-top: 30px;
+            margin-left: 400px;
+        }
+    </style>
     <script src="https://unpkg.com/vue"></script>
 </head>
 
@@ -12,39 +27,239 @@
     <div id="phone">
         <form>
             <div class="string">
-        <input type="text" name="firstname" value=""></span>
+                <input type="text" name="firstname" value=""></span>
             </div>
             <div class="string">
-        <select>
+                <select>
 	        <option>Name</option>
 	        <option>Phone</option>
 	        <option>Interests</option>	
-        </select> 
-          </div>
-           <div>
-        <button class="submit" type="submit"><img src="assets/img/search.png" alt=""></button>
-        </div>  
-          <br>                         
-           <div>
-            <table>
-                <tr is="table-head"></tr>
-                <tr v-for="user in users">
-                    <td>{{Name}}</td>
-                    <td>{{Phone}}</td>
-                    <td>{{Age}}</td>
-                     <td>
-                     <button name="new" value="new">New</button>
-                     <button name="delete" value="delete">Delete</button>
-                     <button name="edit" value="edit">Edit</button>
-                    </td>
-                </tr>
-            </table>
+        </select>
+            </div>
+            <div>
+                <button class="submit" type="submit"><img src="assets/img/search.png" alt=""></button>
+            </div>
+            <br>
+            <div>
+                <table>
+
+                    <tr>
+                        <td>Name</td>
+                        <td>Phone</td>
+                        <td>Age</td>
+                       <td>
+                            <a href="">New</a>
+                            <a href="">Delete</a>
+                            <a href="">Edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>Phone</td>
+                        <td>Age</td>
+                        <td>
+                            <a href="">New</a>
+                            <a href="">Delete</a>
+                            <a href="">Edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>Phone</td>
+                        <td>Age</td>
+                       <td>
+                            <a href="">New</a>
+                            <a href="">Delete</a>
+                            <a href="">Edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>Phone</td>
+                        <td>Age</td>
+                       <td>
+                            <a href="">New</a>
+                            <a href="">Delete</a>
+                            <a href="">Edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>Phone</td>
+                        <td>Age</td>
+                        <td>
+                            <a href="">New</a>
+                            <a href="">Delete</a>
+                            <a href="">Edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>Phone</td>
+                        <td>Age</td>
+                       <td>
+                            <a href="">New</a>
+                            <a href="">Delete</a>
+                            <a href="">Edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>Phone</td>
+                        <td>Age</td>
+                      <td>
+                            <a href="">New</a>
+                            <a href="">Delete</a>
+                            <a href="">Edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>Phone</td>
+                        <td>Age</td>
+                       <td>
+                            <a href="">New</a>
+                            <a href="">Delete</a>
+                            <a href="">Edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>Phone</td>
+                        <td>Age</td>
+                       <td>
+                            <a href="">New</a>
+                            <a href="">Delete</a>
+                            <a href="">Edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>Phone</td>
+                        <td>Age</td>
+                        <td>
+                            <a href="">New</a>
+                            <a href="">Delete</a>
+                            <a href="">Edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>Phone</td>
+                        <td>Age</td>
+                        <td>
+                            <a href="">New</a>
+                            <a href="">Delete</a>
+                            <a href="">Edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>Phone</td>
+                        <td>Age</td>
+                        <td>
+                            <a href="">New</a>
+                            <a href="">Delete</a>
+                            <a href="">Edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>Phone</td>
+                        <td>Age</td>
+                        <td>
+                            <a href="">New</a>
+                            <a href="">Delete</a>
+                            <a href="">Edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>Phone</td>
+                        <td>Age</td>
+                        <td>
+                            <a href="">New</a>
+                            <a href="">Delete</a>
+                            <a href="">Edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>Phone</td>
+                        <td>Age</td>
+                        <td>
+                            <a href="">New</a>
+                            <a href="">Delete</a>
+                            <a href="">Edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>Phone</td>
+                        <td>Age</td>
+                        <td>
+                            <a href="">New</a>
+                            <a href="">Delete</a>
+                            <a href="">Edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>Phone</td>
+                        <td>Age</td>
+                       <td>
+                            <a href="">New</a>
+                            <a href="">Delete</a>
+                            <a href="">Edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>Phone</td>
+                        <td>Age</td>
+                        <td>
+                            <a href="">New</a>
+                            <a href="">Delete</a>
+                            <a href="">Edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>Phone</td>
+                        <td>Age</td>
+                        <td>
+                            <a href="">New</a>
+                            <a href="">Delete</a>
+                            <a href="">Edit</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>Phone</td>
+                        <td>Age</td>
+                        <td>
+                            <a href="">New</a>
+                            <a href="">Delete</a>
+                            <a href="">Edit</a>
+                        </td>
+                    </tr>
+                    
+                    
+                </table>
             </div>
         </form>
-
+<div class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="#">1</a>
+  <a href="#">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#">&raquo;</a>
+</div>
     </div>
     <script src="assets/js/listing.js"></script>
 </body>
 
 </html>
-
