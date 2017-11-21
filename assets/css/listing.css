@@ -50,3 +50,18 @@ td {
 tr:hover td {
     background: #ccddff;
 }
+
+.MainPageTable {
+    border: 2px solid black;
+    width: auto;
+    margin-left: 350px;
+}
+
+a {
+    margin-right: 10px;
+}
+
+.pagination {
+    margin-top: 30px;
+    margin-left: 400px;
+}
