@@ -4,11 +4,12 @@
     cursor: pointer;
 }
 
+/* The actual popup (appears on top) */
 .popup .holder {
     visibility: hidden;
     width: 500px;
-    background-color: #0910E1;
-    color: white;
+    background-color: #66b3ff;
+    color: #000000;
     text-align: center;
     border-radius: 6px;
     padding: 8px 0;
@@ -19,27 +20,30 @@
     margin-left: -100px;
 }
 .popup .head{
-    margin-right: 350px;
-    margin-top: 10px  
+    margin-right: 330px;
+    margin-top: 20px;
 }
 .popup .body{
     text-align: left;
-    margin-left: 10px;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 20px;
 }
 
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
 .popup .show {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s
 }
-
+/* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
     from {opacity: 0;} 
-    to {opacity: 1;}
+    to {opacity: 0.8;}
 }
 
 @keyframes fadeIn {
     from {opacity: 0;}
-    to {opacity:1 ;}
+    to {opacity: 1;}
 }
