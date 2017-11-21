@@ -252,7 +252,7 @@ var Interests = [
 //
 //Users
 //
-var Users = [
+var Persons = [
 {"id":0,"firstName":"Clinton","lastName":"Clift","age": 91, phone: 138481,"active": 1,"interests": [239,121,152,142]},
 {"id":1,"firstName":"Angle","lastName":"Lavine","age": 21, phone: 608314,"active": 0,"interests": [29,85,229,111,185,167]},
 {"id":2,"firstName":"Man","lastName":"Hazlett","age": 84, phone: 566910,"active": 1,"interests": [184,7]},
@@ -407,7 +407,7 @@ var Users = [
 //
 //Usernames and password
 //
-var usernames = [
+var Users = [
 {"username":"Clinton","password":"Clinton0"},
 {"username":"Angle","password":"Angle1"},
 {"username":"Man","password":"Man2"},
