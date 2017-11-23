@@ -4,11 +4,52 @@
     cursor: pointer;
 }
 
+.button {
+    padding: 10px 20px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #2E7094;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px #999;
+}
+
+.button:hover {
+    background-color: #368BB4;
+}
+
+.button:active {
+    background-color: #1a8cff;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    background: url("/assets/img/background.jpg");
+}
+
+div {
+    font-size: 17px;
+    color: #fff;
+    padding: 5px 5px;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 25px;
+    color: #ffffff;
+}
+
 /* The actual popup (appears on top) */
 .popup .holder {
     visibility: hidden;
     width: 500px;
-    background-color: #66b3ff;
+    background-color: #1a8cff;
     color: #000000;
     text-align: center;
     border-radius: 6px;
@@ -19,16 +60,10 @@
     left: 400px;
     margin-left: -100px;
 }
-.popup .head{
-    margin-right: 330px;
-    margin-top: 20px;
-}
 .popup .body{
     text-align: left;
     margin-top: 10px;
-    margin-right: 50px;
-    margin-left: 50px;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
@@ -47,3 +82,4 @@
     from {opacity: 0;}
     to {opacity: 1;}
 }
+
