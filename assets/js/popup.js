@@ -20,7 +20,7 @@ var popup = new Vue({
 	data: {
 		id: 0,
 		firstName: "",
-		lastName: "",
+		lastName: "", 
 		age: 0,
 		phone: 0,
 		active: 0,
