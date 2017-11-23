@@ -1,16 +1,3 @@
-
-class User {
-	constructor(ID, firstName, secondName, age, phone, active, interests){
-		this.ID = ID;
-		this.firstName = firstName;
-		this.secondName = secondName;
-		this.age = age;
-		this.phone = phone;
-		this.active = active;
-		this.interests = interests;
-	}
-}
-
 var interests = [];
 var persons = [];
 
@@ -24,8 +11,8 @@ function addData(JSONusers,JSONinterests){
 		document.write("undefined")
 	}
 	else{
-	persons = JSONusers;
-	interests = JSONinterests;
+		persons = JSONusers;
+		interests = JSONinterests;
 	}
 }
 
@@ -50,10 +37,11 @@ var popup = new Vue({
 			this.phone = persons[id].phone;
 			this.active = persons[id].active;
 			this.interests = persons[id].interests;	
+			if(this.fullInterests.length==0){				   
 			for(var i = 0; i < this.interests.length; i++){
 				this.fullInterests.push(interests[i].description);
 			}
-			alert(this.interests.length);
+			}
 		}
 	}
 })
