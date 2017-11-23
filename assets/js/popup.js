@@ -11,32 +11,49 @@ class User {
 	}
 }
 
+var interests = [];
 var persons = [];
 
-function addUsers(JSONusers){
-	if(JSONusers===undefined){
-		document.write("undefined")
-	}
-	else
-	persons = JSONusers;
+function ViewUser() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
 }
 
+function addData(JSONusers,JSONinterests){
+	if(JSONusers===undefined&&JSONinterests===undefined){
+		document.write("undefined")
+	}
+	else{
+	persons = JSONusers;
+	interests = JSONinterests;
+	}
+}
 
 var popup = new Vue({
 	el: "#popup",
 	data:{
 		id: 0,
-		firstName: persons[0].firstName,
-		secondName: persons[0].secondName,
+		firstName:"",
+		lastName:"",
 		age: 0,
 		phone: 0,
 		active: 0,
-		interests: []
+		interests: [],
+		fullInterests: []
 	},
 	methods:{
-		createPerson: function(){;
-			this.id = users[0].id;
-			this.firstName = users[0].firstName;
+		createPerson: function(id){;
+			this.id = persons[id].id;
+			this.firstName = persons[id].firstName;
+			this.lastName = persons[id].lastName;
+			this.age = persons[id].age;
+			this.phone = persons[id].phone;
+			this.active = persons[id].active;
+			this.interests = persons[id].interests;	
+			for(var i = 0; i < this.interests.length; i++){
+				this.fullInterests.push(interests[i].description);
+			}
+			alert(this.interests.length);
 		}
 	}
 })
