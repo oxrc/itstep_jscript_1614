@@ -1,14 +1,7 @@
-
-Vue.component('trdata', {
-    
-    props: ['count', 'nam'],
-
-    template:'<tr><td>{{count}}</td><td>{{nam}}</td><td><a href="#" @click="edit(name.text)">Edit</a> <a href="#" @click="remove(index)">Delete</a></td></tr>'
-})
 var app = new Vue({
     el: '#UserList',
     data:{
-     users:  Users
+     users:  Persons
     },
     methods: {
       remove (index) {     
