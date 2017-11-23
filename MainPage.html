@@ -5,6 +5,7 @@
     <title>Main Page</title>
     <link rel="stylesheet" href="vendor/purecss/pure.css">
     <link rel="stylesheet" href="assets/css/listing.css">
+    <link rel="stylesheet" href="design/style.css">
     <script src="vendor/vuejs/vue.js"></script>
     <script src="data.js"></script> 
     <script src="assets/js/listing.js"></script>
@@ -40,7 +41,10 @@
                         <td> {{user.firstName}} {{user.lastName}} </td>
                         <td> {{user.phone}} </td>
                         <td> {{user.age}} </td>
-                        <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+                        <td>
+                            <button type="button" class="button">EDIT</button> 
+                            <button type="button" class="button">DELETE</button>
+                        </td>
                     </tr>
                 </table>
             </div>
