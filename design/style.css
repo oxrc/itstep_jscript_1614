@@ -1,0 +1,95 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background: url("img/background.jpg");
+}
+
+div {
+    font-size: 20px;
+    color: #fff;
+    padding: 30px 45px;
+}
+
+.button {
+    padding: 20px 20px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #2E7094;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px #999;
+}
+
+.button:hover {
+    background-color: #368BB4;
+}
+
+.button:active {
+    background-color: #1a8cff;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}
+
+table {
+    width: 50%;
+    margin-left: 25%;
+    background: #ffffff;
+    color: #000;
+    border: 8px solid #66b3ff;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    font-size: 20px;
+    text-align: center;
+    background: #ffffff;
+    padding: 10px;
+    border: 8px solid #66b3ff;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+a:link {
+    color: #2E7094;
+}
+
+a:visited {
+    color: #1a8cff;
+}
+
+a:hover {
+    color: #368BB4;
+}
+
+a:active {
+    color: #1a8cff;
+}
+
+.radio_button {
+    /* Стиль радио-кнопок */
+    width: 70px;
+    height: 18px;
+}
+
+.form_blank {
+    /* Стиль форм */
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    font-style: italic
+}
+
+.input_form {
+    /* Стиль полей ввода */
+    width: 100px;
+    height: 25px;
+    font-size: 20px;
+}
