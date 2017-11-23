@@ -1,5 +1,16 @@
+.info {
+  text-align: left;
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+.interest {
+  
+}
+
 .popup {
-    position: relative;
+    width: 100%;
+    height: 100%;
     display: inline-block;
     cursor: pointer;
 }
@@ -17,6 +28,19 @@
     box-shadow: 0 4px #999;
 }
 
+ol {
+    border-radius: 10px;
+    background: #0b7ae6;
+    padding: 20px;
+}
+
+ol li {
+    border-radius: 10px;
+    background: #66b3ff;
+    padding: 5px;
+    margin-left: 35px;
+}
+
 .button:hover {
     background-color: #368BB4;
 }
@@ -29,7 +53,6 @@
 body {
     margin: 0px;
     padding: 0px;
-    background: url("/assets/img/background.jpg");
 }
 
 div {
@@ -48,18 +71,16 @@ h1 {
 /* The actual popup (appears on top) */
 .popup .holder {
     visibility: hidden;
-    width: 500px;
-    background-color: #1a8cff;
+    width: 600px;
+    background-color: #66b3ff;
     color: #000000;
     text-align: center;
     border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    top: 300px;
-    left: 400px;
-    margin-left: -100px;
+    border: 2px solid #0b7ae6;
+    padding: 10px 30px;
+    margin: 13% auto;
 }
+
 .popup .body{
     text-align: left;
     margin-top: 10px;
