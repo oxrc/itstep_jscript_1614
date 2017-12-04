@@ -33,7 +33,7 @@
                         <th><a href="#">Age</a></th>
                         <th>Operations</th>
                     </tr>
-                    <tr v-for="user in users">
+                    <tr v-for="user in currentUsers">
                         <td> {{user.id}} </td>
                         <td> {{user.firstName}} {{user.lastName}} </td>
                         <td> {{user.phone}} </td>
@@ -43,7 +43,7 @@
                 </table>
                 <div class="pagination">
             <a href="#">&laquo;</a>
-            <a href="#" v-for="page in pages">{{page}}</a>           
+            <a href="#" v-for="page in pages" v-on:click="count()">{{page}}</a>           
             <a href="#">&raquo;</a>
         </div>
             </div>
