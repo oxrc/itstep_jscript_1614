@@ -1,50 +1,47 @@
+var  personPerPage=20;
+var  pages= [];
+var currentPage=1;
+var currentUsers=[];
+
+
 var app = new Vue({
     el: '#UserList',
     data: {
         users: Persons,
-        pages: [],
-        personPerPage: 20,
+        pages:pages,       
+        currentPage:0,
+        personPerPage:20,
+        currentUsers:currentUsers,
+        counter: 0        
     },
     methods: {
-        remove(index) {
-            this.$delete(this.names, index)
+        colvoPages: function (){
+           return Math.ceil(Persons.length /personPerPage);
         },
-        edit(name) {
-            document.location.href = "https://www.google.com/search?q=" + name;
+        pagess: function () {
+            for (i = 1; i < app.colvoPages(); i++) {
+                pages.push(i);
+            }
+             return pages;
         },
-        sortByNumber() {
-            if (this.sorted === false) {
-                this.sorted = true;
-                this.names.sort(function (a, b) {
-                    return a.count > b.count;
-                })
-            } else if (this.sorted === true) {
-                this.sorted = false;
-                this.names.sort(function (a, b) {
-                    return a.count < b.count; //                
-                })
-            }
-        }, //sorted
-        sortByName() {
-            if (this.sorted === false) {
-                this.sorted = true;
-                this.names.sort(function (a, b) {
-                    return a.text.toUpperCase() > b.text.toUpperCase();
-                })
-            } else if (this.sorted === true) {
-                this.sorted = false;
-                this.names.sort(function (a, b) {
-                    return a.text.toUpperCase() < b.text.toUpperCase();
-                })
-            }
+        getCurrentusers:function(){
+          this.currentUsers=Persons.slice(this.currentPage, (this.currentPage + this.personPerPage));  
+        console.log(this.currentUsers);
         },
-        computed: {
-            numberPage: function () {
-                return Math.ceil(Persons.length / personPerPage)
+        count: function(){
+            
+            if (this.currentPage>=this.colvoPages()){
+              this.currentPage=0;                
             }
-            //            for (i=1; i<numberPage; i++){
-            //            pages.push(i);
-            //        }
+            else {
+                 this.currentPage++;            
+            } 
         }
-    } //methods
+    }, 
+    computed:{
+        currentUsers:this.getCurrentusers();
+    }
 }) //Vue
+pages=app.pagess();
+app.currentUsers=app.getCurrentusers();
+currentUsers=app.getCurrentusers();
