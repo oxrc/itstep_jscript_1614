@@ -3,246 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <title>Main Page</title>
+  <link rel="stylesheet" href="vendor/purecss/pure.css">
   <link rel="stylesheet" href="assets/css/listing.css">
-  <script src="assets/js/listing.js"></script>
+  <script type="text/javascript" src="vendor/vuejs/vue.js"></script>
+  <script type="text/javascript" src="data.js"></script> 
+  <script type="text/javascript" src="assets/js/listing.js"></script>
 </head>
 <body>
-  <div id="phone">
-    <form>
-      <div class="string">
-        <input type="text" name="firstname" value="">
-        </span>
-      </div>
-      <div class="string">
+  <div>
+      <form>
+        <div class="string">
+          <input type="text" name="firstname" value=""></span>
+        </div>
+        <div class="string">
         <select>
           <option>Name</option>
           <option>Phone</option>
-          <option>Interests</option>
+          <option>Interests</option>	
         </select>
+        </div>
+        <div>
+          <button class="submit" type="submit"><img src="assets/img/search.png" alt=""></button>
+        </div>
+        <br>
+        <div>
+          <table id="UserList" class="MainPageTable">
+            <tr>
+              <th>Id</th>
+              <th><a href="#">Name</a></th>
+              <th><a href="#">Phone</a></th>
+              <th><a href="#">Age</a></th>
+              <th>Operations</th>
+            </tr>
+            <tr v-for="user in users">
+              <td> {{user.id}} </td>
+              <td> {{user.firstName}} {{user.lastName}} </td>
+              <td> {{user.phone}} </td>
+              <td> {{user.age}} </td>
+              <td><a href="#">Edit</a> <a href="#">Delete</a></td>
+            </tr>
+          </table>
+        </div>
+      </form>
+      <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">&raquo;</a>
       </div>
-      <div>
-        <button class="submit" type="submit">
-          <img src="assets/img/search.png" alt="">
-        </button>
-      </div>
-      <br>
-      <div>
-        <table class="MainPageTable">
-
-          <tr>
-            <td>Name</td>
-            <td>Phone</td>
-            <td>Age</td>
-            <td>
-              <a href="">New</a>
-              <a href="">Delete</a>
-              <a href="">Edit</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Name</td>
-            <td>Phone</td>
-            <td>Age</td>
-            <td>
-              <a href="">New</a>
-              <a href="">Delete</a>
-              <a href="">Edit</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Name</td>
-            <td>Phone</td>
-            <td>Age</td>
-            <td>
-              <a href="">New</a>
-              <a href="">Delete</a>
-              <a href="">Edit</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Name</td>
-            <td>Phone</td>
-            <td>Age</td>
-            <td>
-              <a href="">New</a>
-              <a href="">Delete</a>
-              <a href="">Edit</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Name</td>
-            <td>Phone</td>
-            <td>Age</td>
-            <td>
-              <a href="">New</a>
-              <a href="">Delete</a>
-              <a href="">Edit</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Name</td>
-            <td>Phone</td>
-            <td>Age</td>
-            <td>
-              <a href="">New</a>
-              <a href="">Delete</a>
-              <a href="">Edit</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Name</td>
-            <td>Phone</td>
-            <td>Age</td>
-            <td>
-              <a href="">New</a>
-              <a href="">Delete</a>
-              <a href="">Edit</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Name</td>
-            <td>Phone</td>
-            <td>Age</td>
-            <td>
-              <a href="">New</a>
-              <a href="">Delete</a>
-              <a href="">Edit</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Name</td>
-            <td>Phone</td>
-            <td>Age</td>
-            <td>
-              <a href="">New</a>
-              <a href="">Delete</a>
-              <a href="">Edit</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Name</td>
-            <td>Phone</td>
-            <td>Age</td>
-            <td>
-              <a href="">New</a>
-              <a href="">Delete</a>
-              <a href="">Edit</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Name</td>
-            <td>Phone</td>
-            <td>Age</td>
-            <td>
-              <a href="">New</a>
-              <a href="">Delete</a>
-              <a href="">Edit</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Name</td>
-            <td>Phone</td>
-            <td>Age</td>
-            <td>
-              <a href="">New</a>
-              <a href="">Delete</a>
-              <a href="">Edit</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Name</td>
-            <td>Phone</td>
-            <td>Age</td>
-            <td>
-              <a href="">New</a>
-              <a href="">Delete</a>
-              <a href="">Edit</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Name</td>
-            <td>Phone</td>
-            <td>Age</td>
-            <td>
-              <a href="">New</a>
-              <a href="">Delete</a>
-              <a href="">Edit</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Name</td>
-            <td>Phone</td>
-            <td>Age</td>
-            <td>
-              <a href="">New</a>
-              <a href="">Delete</a>
-              <a href="">Edit</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Name</td>
-            <td>Phone</td>
-            <td>Age</td>
-            <td>
-              <a href="">New</a>
-              <a href="">Delete</a>
-              <a href="">Edit</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Name</td>
-            <td>Phone</td>
-            <td>Age</td>
-            <td>
-              <a href="">New</a>
-              <a href="">Delete</a>
-              <a href="">Edit</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Name</td>
-            <td>Phone</td>
-            <td>Age</td>
-            <td>
-              <a href="">New</a>
-              <a href="">Delete</a>
-              <a href="">Edit</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Name</td>
-            <td>Phone</td>
-            <td>Age</td>
-            <td>
-              <a href="">New</a>
-              <a href="">Delete</a>
-              <a href="">Edit</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Name</td>
-            <td>Phone</td>
-            <td>Age</td>
-            <td>
-              <a href="">New</a>
-              <a href="">Delete</a>
-              <a href="">Edit</a>
-            </td>
-          </tr>
-
-
-        </table>
-      </div>
-    </form>
-    <div class="pagination">
-      <a href="#">&laquo;</a>
-      <a href="#">1</a>
-      <a href="#">2</a>
-      <a href="#">3</a>
-      <a href="#">4</a>
-      <a href="#">5</a>
-      <a href="#">6</a>
-      <a href="#">&raquo;</a>
     </div>
   </div>
   <script src="assets/js/listing.js"></script>
