@@ -23,7 +23,7 @@ var popup = new Vue({
     lastName: "",
     age: 0,
     phone: 0,
-    active: 0,
+    active: "",
     interests: [],
     fullInterests: []
   },
@@ -35,6 +35,10 @@ var popup = new Vue({
       this.age = persons[id].age;
       this.phone = persons[id].phone;
       this.active = persons[id].active;
+      if(persons[id].active==1){
+        this.active = "Yes";
+      }
+      else this.active = "No";
       this.interests = persons[id].interests;
       if (this.fullInterests.length == 0) {
         for (var i = 0; i < this.interests.length; i++) {
