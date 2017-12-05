@@ -1,0 +1,29 @@
+{
+  "name": "itstep_jscript_1614",
+  "version": "1.0.0",
+  "description": "Information about our users",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oxrc/itstep_jscript_1614.git"
+  },
+  "keywords": [
+    "ItStep",
+    "teamwork",
+    "github",
+    "nodejs",
+    "javascript"
+  ],
+  "author": "Roman Hantatuc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oxrc/itstep_jscript_1614/issues"
+  },
+  "homepage": "https://github.com/oxrc/itstep_jscript_1614#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
