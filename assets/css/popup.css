@@ -28,18 +28,7 @@
     box-shadow: 0 4px #999;
 }
 
-ol {
-    border-radius: 10px;
-    background: #0b7ae6;
-    padding: 20px;
-}
 
-ol li {
-    border-radius: 10px;
-    background: #66b3ff;
-    padding: 5px;
-    margin-left: 35px;
-}
 
 .button:hover {
     background-color: #368BB4;
@@ -72,13 +61,12 @@ h1 {
 .popup .holder {
     visibility: hidden;
     width: 600px;
-    background-color: #66b3ff;
+    background-color: rgba(65,65,65,0.9);
     color: #000000;
     text-align: center;
-    border-radius: 6px;
-    border: 2px solid #0b7ae6;
     padding: 10px 30px;
     margin: 13% auto;
+  
 }
 
 .popup .body{
