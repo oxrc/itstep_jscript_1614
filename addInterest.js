@@ -14,14 +14,22 @@ app.get('/interest/new', function (req, res) {
   var status;
   db.run(`INSERT INTO Interest(description) VALUES(?)`, [req.query.desc], function (err) {
     if (err) {
-      status = {status: "error", error_text: err.message}
+      status = {
+        status: "error",
+        error_text: err.message
+      }
       res.json(status);
       return console.log(err.message);
     }
     console.log(`A row has been inserted with rowid ${this.lastID}`);
-    status = {status: "ok",interest:{id:this.lastID,description:req.query.desc}}
+    status = {
+      status: "ok",
+      interest: {
+        id: this.lastID,
+        description: req.query.desc
+      }
+    }
     res.json(status);
-    var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
   });
 });
 
