@@ -10,7 +10,7 @@ let db = new sqlite3.Database('user-store.db', (err) => {
 });
 
 console.log('Server is up.');
-app.get('/person/delete', function (req, res) {
+app.get('/user/delete', function (req, res) {
   db.run(`DELETE from Person WHERE id =` + req.query.id, function (err) {
     if (err) {
       status = {
