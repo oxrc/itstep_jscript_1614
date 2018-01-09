@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edit User</title>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+
+</head>
+
+<body>
+    <h1>Edit user</h1>
+
+    <a href="#"><img src="img/home.png" width="30" alt=""></a>
+
+    <div class="panel-body" id="app">
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th style="width: 20px;">No.</th>
+                    <th>Interest</th>
+
+                    <th style="width: 130px;"></th>
+                </tr>
+            </thead>
+            <tbody v-sortable.tr="rows">
+                <tr v-for="row in rows" track-by="$index">
+                    <td>
+                        {{ $index +1 }}
+                    </td>
+                    <td>
+                        <input class="form-control" v-model="row.description" />
+                    </td>
+                    <td>
+                        <button class="btn btn-primary btn-xs" @click="addRow($index)">add row</button>
+                        <button class="btn btn-danger btn-xs" @click="removeRow($index)">remove row</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <form>
+            <table class="table table-hover">
+                <tr>
+                    <td>
+                        First name
+                    </td>
+                    <td>
+                        <input type="text" name="firstname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Last name
+                    </td>
+                    <td>
+                        <input class="input_form" type="text" name="lastname">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mobile phone
+                    </td>
+                    <td>
+                        <input type="text" name="name" id="name" value="" size="12" tabindex="1" />
+                    </td>
+                </tr>
+            </table>
+            <button @click="getData()">SUBMIT DATA</button>
+
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js'></script>
+    <script src="edituser.js"></script>
+
+</body>
+
+</html>
