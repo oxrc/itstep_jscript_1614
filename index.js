@@ -1,4 +1,5 @@
 var persons=[];
+var interests=[]
 var convertedPersons;
 
 const sqlite3 = require('sqlite3').verbose();
@@ -21,6 +22,15 @@ db.serialize(() => {
   });
 })
 
+
+db.serialize(() => {
+    db.each(`SELECT Interests from Person`, (err, row) => {
+      if (err) {
+        console.error(err.message);
+      }
+      interests.push(row)
+  });
+})
 
 app.get('/', function (req, res) {
     res.send(persons);
