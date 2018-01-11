@@ -83,8 +83,6 @@ table {
   width: 95%;
   margin: auto;
   text-align: center;
-  margin-right: 20px;
-
 }
 
 body {
@@ -95,6 +93,13 @@ body {
 .button {
   background-color: #368BB4;
 }
+
+.button:active {
+    background-color: #1a8cff;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}
+
 
 .page-wrap {
     max-width: 1000px;

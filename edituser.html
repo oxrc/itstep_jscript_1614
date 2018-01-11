@@ -2,76 +2,37 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Edit User</title>
-    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-
+  <meta charset="UTF-8">
+  <title>Edit User</title>
+  <link rel="stylesheet" href="vendor/purecss/pure.css">
+  <script type="text/javascript" src="vendor/vuejs/vue.js"></script>
+  <link rel="stylesheet" href="assets/css/editUser.css">
 </head>
 
 <body>
-    <h1>Edit user</h1>
+  <div id="sc-edprofile">
+    <h1>Edit Profile Form</h1>
+    <div class="sc-container">
+      <input type="text" placeholder="First Name" />
+      <input type="text" placeholder="Last Name" />
+      <input type="number" placeholder="Age" />
+      <input type="text" placeholder="Mobile" />
 
-    <a href="#"><img src="img/home.png" width="30" alt=""></a>
+      <textarea placeholder="Add interest" /></textarea>
+      <button id="addButton">Add</button>
+      <select>
+      <option value="">Active</option>
+      <option value="">Non Active</option>
+    </select>     
 
-    <div class="panel-body" id="app">
-
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th style="width: 20px;">No.</th>
-                    <th>Interest</th>
-
-                    <th style="width: 130px;"></th>
-                </tr>
-            </thead>
-            <tbody v-sortable.tr="rows">
-                <tr v-for="row in rows" track-by="$index">
-                    <td>
-                        {{ $index +1 }}
-                    </td>
-                    <td>
-                        <input class="form-control" v-model="row.description" />
-                    </td>
-                    <td>
-                        <button class="btn btn-primary btn-xs" @click="addRow($index)">add row</button>
-                        <button class="btn btn-danger btn-xs" @click="removeRow($index)">remove row</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <form>
-            <table class="table table-hover">
-                <tr>
-                    <td>
-                        First name
-                    </td>
-                    <td>
-                        <input type="text" name="firstname">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Last name
-                    </td>
-                    <td>
-                        <input class="input_form" type="text" name="lastname">
-
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Mobile phone
-                    </td>
-                    <td>
-                        <input type="text" name="name" id="name" value="" size="12" tabindex="1" />
-                    </td>
-                </tr>
-            </table>
-            <button @click="getData()">SUBMIT DATA</button>
-
+  <ul class="tags">
+        <li><a href="#" class="tag">HTML</a></li>
+        <li><a href="#" class="tag">CSS</a></li>
+        <li><a href="#" class="tag">Это мой интерес, я люблю играть в ЛОЛ</a></li>
+      </ul>
+      <input type="submit" value="Save" />
     </div>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js'></script>
-    <script src="edituser.js"></script>
+  </div>
 
 </body>
 
