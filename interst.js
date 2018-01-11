@@ -1,3 +1,4 @@
+console.log('Test')
 var interest = 'test for us';
 var persons = [];
 
@@ -12,20 +13,36 @@ let db = new sqlite3.Database('user-store.db', (err) => {
 
 var express = require('express');
 var app = express();
-
+var errors={
+    mesage:'',
+    status:''
+}
+var rezult={
+    id:'',
+    description:''
+}
 app.get('/interest', function (req, res) {
 
-    db.each(`SELECT description from Interest where id=?`, req.query.id, (err, item) => {
-        if (err) {
-            console.error(err.message);
-            res.send(err.message);
-        } else {
-            interest = item;
-            res.send(interest);
+    db.all(`SELECT * from Interest where id=?`, req.query.id, function (err, rows) {
+        if (err != null) {
+            console.log(err);
+            errors.status=err.name;
+            errors.mesage=err.message;
+            res.json(errors);            
         }
-    });
-    res.send('No such interest');
 
+        if (rows.length === 0) {
+             errors.status='Not found element';
+            errors.mesage='No such interest';
+            res.json(errors);
+        }
+
+        rows.forEach(function (row) {
+          rezult.id=row.id;
+            rezult.description=row.description;
+            res.json(rezult);
+        })
+    });
 });
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'))
