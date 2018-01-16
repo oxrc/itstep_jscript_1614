@@ -1,31 +1,25 @@
 var persons=[];
 var convertedPersons;
 
-const sqlite3 = require('sqlite3').verbose();
-console.log('Server is up.');
-let db = new sqlite3.Database('user-store.db', (err) => {
-  if (err) {
-    return console.error(err.message);
-  }
-  console.log('Connected to the in-memory SQlite database.');
-});
 var express = require('express')
-var app = express()
+var app = module.exports = express();
 
-db.serialize(() => {
-    db.each(`SELECT * from Person`, (err, row) => {
-      if (err) {
-        console.error(err.message);
-      }
-      persons.push(row)
-  });
-})
-
+console.log('Server is up.');
 
 app.get('/', function (req, res) {
     res.send(persons);
 });
 
+var addInterest = require('./lib/addInterest');
+var deleteInterest = require('./lib/deleteInterest');
+var deletePerson = require('./lib/deletePerson');
+var editInterest = require('./lib/editInterest');
+var editPerson = require('./lib/editPerson');
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.use(addInterest);
+app.use(deleteInterest);
+app.use(deletePerson);
+app.use(editInterest);
+app.use(editPerson);
 
+app.listen(3000, () => console.log('Listening on port 3000'))
