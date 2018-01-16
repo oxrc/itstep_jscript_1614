@@ -13,35 +13,50 @@ let db = new sqlite3.Database('user-store.db', (err) => {
 
 var express = require('express');
 var app = express();
-var errors={
-    mesage:'',
-    status:''
+var errors = {
+    mesage: '',
+    status: ''
 }
-var rezult={
-    id:'',
-    description:''
+var rezult = {
+    description: ''
 }
-app.get('/user/edit?id=&firstName=&lastName=&age=&phone=', function (req, res) {
+app.get('/user/edit', function (req, res) {
 
-    db.run(`Update Person set firstName=?, lastName=?, age=? where id=?`, req.query.id, req.query.firstName, req.query.lastName, function (err, rows) {
+    db.run(`Update Person set firstName=?, lastName=?, phone=?, age=? where id=?`, req.query.firstName, req.query.lastName, req.query.age, req.query.phone, req.query.id, function (err) {
+
+        errors.status='not enought parameters' 
+        if (req.query.firstName == null) {
+            errors.mesage = 'firstName is empty';
+            return res.json(errors);
+        }
+        if (req.query.lastName == null) {
+            errors.mesage = 'lastName is empty';
+            return res.json(errors);
+        }
+        if (req.query.phone == null) {
+            errors.mesage = 'Phone is empty';
+            return res.json(errors);
+        }
+        if (req.query.age == null) {
+            errors.mesage = 'Phone is empty';
+            return res.json(errors);
+        }
         if (err != null) {
             console.log(err);
-            errors.status=err.name;
-            errors.mesage=err.message;
-            res.json(errors);            
-        }
-
-        if (rows.length === 0) {
-             errors.status='Not found element';
-            errors.mesage='No such interest';
+            errors.status = err.name;
+            errors.mesage = err.message;
             res.json(errors);
         }
+        if (this.changes === 0) {
+            errors.status = 'Not found element';
+            errors.mesage = 'No such Person';
+            return res.json(errors);
+        }
 
-        rows.forEach(function (row) {
-          rezult.id=row.id;
-            rezult.description=row.description;
-            res.json(rezult);
-        })
+        console.log(`Row(s) updated: ${this.changes}`)
+        rezult.description = 'User data update success, rows updated=' + this.changes;
+        return res.json(rezult);
+
     });
 });
 
