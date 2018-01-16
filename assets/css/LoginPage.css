@@ -1,9 +1,3 @@
-body{
-  margin: 0px;
-  padding: 0px;
-  background: url("/assets/img/background.jpg");
-}
-
 h1{
   color: #fff;
   text-align: center;
@@ -15,12 +9,9 @@ h1{
 .form{
   width: 400px;
   height: 230px;
-  background: #4A4A4A;
+  background: #f0f0f0;
   margin: 200px auto;
   padding-top: 20px;
-  border-radius: 10px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
 }
 
 input[type="text"]{
@@ -45,16 +36,13 @@ input[type="text"]:focus{
 
 input[type="submit"]{
   display: block;
-  background: #368BB4;
+  background: #3399cc;
   width: 314px;
   padding: 12px;
   cursor: pointer;
   color: #fff;
   border: 0px;
   margin: auto;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
   font-size: 17px;
   transition: all 0.3s ease;
 }
