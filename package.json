@@ -24,6 +24,10 @@
   },
   "homepage": "https://github.com/oxrc/itstep_jscript_1614#readme",
   "dependencies": {
-    "express": "^4.16.2"
-  }
+    "express": "^4.16.2",
+    "sqlite3": "^3.1.13"
+  },
+  /*"bundledDependencies": [
+      "addInterest"
+  ]*/
 }
