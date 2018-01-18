@@ -1,59 +1,67 @@
-
-a {
-  color: black;
-  text-decoration: none;
-  font-variant: small-caps
+input {
+    align-self: baseline;
+    height: 30px;
+    width: 200px;
+    margin-left: 350px;
 }
 
+form {
+    align-items: center;
+}
 
-th {
-  text-align: center;
-  background-color: #3399cc;
-  color: aliceblue;
+select {
+    height: 36px;
+    width: 120px;
 }
 
 table {
-  width: 95%;
-  margin: auto;
-  text-align: center;
+    border: 2px solid black;
+    width: auto;
+    margin-left: 350px;
 }
 
-body {
-  margin-top: 40px;
-  text-align: center;
- }
-
-.button {
-  background-color: #3399cc;
+.string {
+    float: left;
 }
 
-.button:active {
-    background-color: #1a8cff;
-    box-shadow: 0 2px #666;
-    transform: translateY(4px);
+button {
+    margin: 0px;
+    height: 36px;
 }
 
+th {
+    font-size: 13px;
+    font-weight: normal;
+    background: #b9c9fe;
+    border-top: 4px solid #aabcfe;
+    border-bottom: 1px solid #fff;
+    color: #039;
+    padding: 8px;
+}
 
-.page-wrap {
-    max-width: 1000px;
-    margin: auto;
+td {
+    background: #e8edff;
+    border-bottom: 1px solid #fff;
+    color: #669;
+    border-top: 1px solid transparent;
+    padding: 8px;
+}
+
+tr:hover td {
+    background: #ccddff;
+}
+
+.MainPageTable {
+    border: 2px solid black;
+    width: auto;
+    margin-left: 350px;
+}
+
+a {
+    margin-right: 10px;
 }
 
 .pagination {
-    display: inline-block;
-    margin-top: 10px;
+    margin-top: 30px;
+    margin-left: 400px;
 }
-
-.pagination a {
-    color: black;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
-}
-
-.pagination a.active {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.pagination a:hover:not(.active) {background-color: #ddd;}

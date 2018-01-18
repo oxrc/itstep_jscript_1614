@@ -39,7 +39,7 @@ var app = new Vue({
         }
     }, 
     computed:{
-        //currentUsers:this.getCurrentusers();
+        currentUsers:this.getCurrentusers();
     }
 }) //Vue
 pages=app.pagess();
