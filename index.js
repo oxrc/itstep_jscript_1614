@@ -16,6 +16,7 @@ var deletePerson = require('./lib/deletePerson');
 var editInterest = require('./lib/editInterest');
 var editPerson = require('./lib/editPerson');
 var ViewUsers = require('./lib/ViewUsers');
+var searchInterest = require('./lib/searchInterest');
 
 app.use(addInterest);
 app.use(deleteInterest);
@@ -23,5 +24,6 @@ app.use(deletePerson);
 app.use(editInterest);
 app.use(editPerson);
 app.use(ViewUsers);
+app.use(searchInterest);
 
 app.listen(3000, () => console.log('Listening on port 3000'))

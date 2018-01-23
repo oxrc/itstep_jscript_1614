@@ -15,7 +15,8 @@ function addData(JSONusers, JSONinterests) {
   }
 }
 
-var popup = new Vue({
+var popup = n
+ew Vue({
   el: "#popup",
   data: {
     id: 0,
