@@ -20,31 +20,54 @@ app.post('/admin/login/', function (req, res) {
     var login = req.body.name;
     var pass = req.body.pass;
     var generatedSid = '';
-    var ip = req.ip;
-    console.log(login);
-    console.log(pass);
-    console.log("ip is"+ip);
 
-    db.get("Select password from Users where name= " + login, function (err, password) {
+    console.log("login =" + login);
+    console.log("pass =" + pass);
 
-        if (err != null) {
-            console.log(err.mesage);
-            res.json(err);
+    /////
+    var os = require('os');
+
+    var networkInterfaces = os.networkInterfaces();
+
+    var ip = networkInterfaces.Ethernet[0].address;
+    console.log("client IP is " + ip);
+
+    let query1 = "Select * from User where userName=" + "'" + login + "'";
+    let query2 = "Select * from Person where firstName=" + "'" + login + "'";
+    console.log(query2);
+
+    db.get(query1, function (err, row) {
+
+        if (row !== undefined) {
+            console.log("Naideno " + row.password);
+        } else {
+
         }
 
-        if (password == pass) {
-            generatedSid = "fsfh75t35tycn39ty3n9";
-            var ip = "192.568.256.311" //req.body.ip;
-            var uid = '';
-            var timeStemp
+        if (err != null) {
+            console.log("No such person " + err.mesage);
+            return res.json(err);
+        }
 
-            db.get("Select from Person where name= " + login, function (err, userId) {
+
+        if (row.password == pass) {
+            generatedSid = "fsfh75t35tycn39ty3n9";
+            console.log("generatedSid is complite");
+            var uid = '';
+            var timeStemp = '';
+
+            db.get(query2, function (err, row) {
                 if (err != null) {
                     console.log(err.mesage);
-                    res.json(err);
+                    return res.json("Net usera");
                 }
-                uid = userId;
-                console.log("user id=" + uid);
+                if (row !== undefined) {
+                    console.log("Naideno " + row.id);
+                    uid = row.id;
+                    console.log("user id=" + uid);
+                } else {
+
+                }
             });
 
 
