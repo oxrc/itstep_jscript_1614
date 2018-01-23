@@ -21,4 +21,5 @@ app.get('/user/read', function (req, res) {
     });
     console.log(`A row ${req.id}`);
 });
+
 app.listen(3000, () => console.log('Listening on 300'))
